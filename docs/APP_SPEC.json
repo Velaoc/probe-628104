@@ -1,0 +1,30 @@
+{
+  "name": "probe-628104",
+  "purpose": "One-page guestbook: visitors type a short message and see the wall of messages, newest first. No accounts, no commerce — the smallest possible foundation app.",
+  "actors": [
+    "Visitor"
+  ],
+  "entities": [
+    {
+      "name": "Message",
+      "relationships": [
+        "has a name (optional)",
+        "has a body (required)",
+        "has created_at for newest-first ordering"
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "name": "Post a message",
+      "description": "Visitor types a name and a short message and submits; it appears at the top of the wall."
+    },
+    {
+      "name": "View the wall",
+      "description": "Public root lists all messages, newest first."
+    }
+  ],
+  "modules": [],
+  "integrations": [],
+  "seed_demo": "Three sample messages with names and timestamps so the wall looks alive on first load."
+}
